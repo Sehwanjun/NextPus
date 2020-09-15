@@ -84,9 +84,12 @@ const LandingPage = () => {
             <CareerContent>
               <CareerHeader>분야별 직업 및 학습정보</CareerHeader>
               <CareerText>
-                미래에 유망한 직업 중심으로 다양한 직업분야를 탐색하고 본인에게
+                {/* 미래에 유망한 직업 중심으로 다양한 직업분야를 탐색하고 본인에게
                 맞는 가장 적절하고<br></br> 효과적인 학습방법을 확인하여 새로운
-                직업에 도전해보세요.
+                직업에 도전해보세요. */}
+                새로운 직업을 갖기 위해 배워야 하는 학습내용 모든 것들을
+                담아내어 많은 사람들에게 정보를 제공하고자 합니다. <br></br>
+                실질적이고 유용한 노하우와 지식을 후배들에게 들려주세요.
               </CareerText>
             </CareerContent>
           </CareerDiv>
@@ -151,6 +154,7 @@ const LandingPage = () => {
                   <FooterAddressText>
                     ☎ 서비스관련 문의: 010-7578-1252
                   </FooterAddressText>
+                  <FooterAddressText>ⓘ arthursmind@naver.com</FooterAddressText>
                 </FooterAddress>
               </FooterHeader>
             </FooterContainer>

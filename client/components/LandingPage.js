@@ -1,10 +1,10 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Link from "next/link";
-import explain_image from "../static/img/first_bg_round_real.png";
-import flow_Nextpus_image from "../static/img/flow_Nextpus.png";
-import careerpath_image from "../static/img/careerpath_img.png";
-import lifestyle_image from "../static/img/lifestyle_img.png";
+import explainImage from "../static/img/first_bg_round_real.png";
+import flowNextpusImage from "../static/img/flow_Nextpus.png";
+import careerpathImage from "../static/img/careerpath_img.png";
+import lifestyleImage from "../static/img/lifestyle_img.png";
 
 const LandingPage = () => {
   return (
@@ -14,7 +14,7 @@ const LandingPage = () => {
           <Intro className="first-box_intro-text">
             <SublineText>
               새로운 분야에 도전하거나
-              <br></br>
+              <br />
               직업에 대한 전문성을 키우고 싶은 분들을 위한 학습 종합 플랫폼 -
             </SublineText>
             <HeadlineText>
@@ -69,18 +69,15 @@ const LandingPage = () => {
                 통해 새로운 전문인으로 본인을 성장시켜나가시기 바랍니다.
               </ExplainText>
             </ExplainDiv>
-            <ExplainImg src={explain_image} alt="ExplainImg"></ExplainImg>
+            <ExplainImg src={explainImage} alt="ExplainImg" />
           </ExplainSection>
         </Section>
         <NextPusFlowSection className="forth-box_flow">
-          <NextPusFlowImage
-            src={flow_Nextpus_image}
-            alt="FlowNextpus"
-          ></NextPusFlowImage>
+          <NextPusFlowImage src={flowNextpusImage} alt="FlowNextpus" />
         </NextPusFlowSection>
         <CareerAndLifestyleSection className="career-and-lifestyle__section">
           <CareerDiv>
-            <CareerImage src={careerpath_image} alt="careerpath"></CareerImage>
+            <CareerImage src={careerpathImage} alt="careerpath" />
             <CareerContent>
               <CareerHeader>분야별 직업 및 학습정보</CareerHeader>
               <CareerText>
@@ -88,16 +85,13 @@ const LandingPage = () => {
                 맞는 가장 적절하고<br></br> 효과적인 학습방법을 확인하여 새로운
                 직업에 도전해보세요. */}
                 새로운 직업을 갖기 위해 배워야 하는 학습내용 모든 것들을
-                담아내어 많은 사람들에게 정보를 제공하고자 합니다. <br></br>
+                담아내어 많은 사람들에게 정보를 제공하고자 합니다. <br />
                 실질적이고 유용한 노하우와 지식을 후배들에게 들려주세요.
               </CareerText>
             </CareerContent>
           </CareerDiv>
           <LifestyleDiv>
-            <LifestyleImage
-              src={lifestyle_image}
-              alt="lifestyle"
-            ></LifestyleImage>
+            <LifestyleImage src={lifestyleImage} alt="lifestyle" />
             <LifestyleContent>
               <LifestyleHeader>라이프스타일 정보공유</LifestyleHeader>
               <CareerText>
@@ -192,7 +186,7 @@ const Main = styled.div`
   display: block;
 `;
 
-//Main- contents box
+// Main- contents box
 const Section = styled.div`
   display: flex;
   align-items: center;
@@ -493,9 +487,9 @@ const FooterNavbarListA = styled.a`
   background-color: transparent;
 `;
 
-//////////////////////////////////////////
-///////  Text & Text Wrapper ///////////
-////////////////////////////////////////
+/// ///////////////////////////////////////
+/// ////  Text & Text Wrapper ///////////
+/// /////////////////////////////////////
 
 const HeadlineText = styled.h1`
   font-size: 3rem;
@@ -590,37 +584,37 @@ const JoinusTextSubline = styled.h4`
     "Noto Color Emoji";
 `;
 
-//////////////////////////////////////////
-///////  Image  /////////////////////////
-////////////////////////////////////////
+/// ///////////////////////////////////////
+/// ////  Image  /////////////////////////
+/// /////////////////////////////////////
 
-const LogoWrap = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  color: #209648;
-  &:hover {
-    color: #209648;
-  }
-`;
+// const LogoWrap = styled.a`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-right: auto;
+//   color: #209648;
+//   &:hover {
+//     color: #209648;
+//   }
+// `;
 
-const LogoImage = styled.img`
-  float: left;
-  height: 40px;
-  &:hover {
-    height: 42px;
-  }
-`;
+// const LogoImage = styled.img`
+//   float: left;
+//   height: 40px;
+//   &:hover {
+//     height: 42px;
+//   }
+// `;
 
-const Logo_TextDiv = styled.div`
-  text-align: center;
-  font-size: 24px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  padding-left: 5px;
-`;
+// const Logo_TextDiv = styled.div`
+//   text-align: center;
+//   font-size: 24px;
+//   margin: auto;
+//   display: flex;
+//   align-items: center;
+//   padding-left: 5px;
+// `;
 
 const ExplainImg = styled.img`
   height: 840px;
@@ -649,17 +643,17 @@ const LifestyleImage = styled.img`
   margin: 0 72px 56px 0;
 `;
 
-//////////////////////////////////////////
-///////  Button /////////////////////////
-////////////////////////////////////////
+/// ///////////////////////////////////////
+/// ////  Button /////////////////////////
+/// /////////////////////////////////////
 
-const ButtonWrap = styled.div`
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto;
-`;
+// const ButtonWrap = styled.div`
+//   width: 400px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 50px auto;
+// `;
 
 const Button = styled.button`
   width: 96px;
@@ -725,8 +719,8 @@ const ServiceCommingButton = styled(ServiceButton)`
   border-radius: 28px;
 `;
 
-const Anchor = styled(Button.withComponent("a"))`
-  color: black;
-`;
+// const Anchor = styled(Button.withComponent("a"))`
+//   color: black;
+// `;
 
 export default LandingPage;

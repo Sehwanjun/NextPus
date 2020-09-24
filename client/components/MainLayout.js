@@ -1,7 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import { Menu } from "antd";
+import { Menu, Input, Row, Col } from "antd";
+import styled from "styled-components";
+import UserProfile from "./UserProfile";
+
+const SerchInput = styled(Input.Search)`
+  vertical-align: middle;
+`;
+
+// children: node 타입
+// return 안에 들어갈 수 있는 모든 것들
+// (즉, <AppLayout> = children)
 
 const MainLayout = ({ children }) => {
   return (
@@ -9,8 +19,8 @@ const MainLayout = ({ children }) => {
       <div>
         <Menu mode="horizontal">
           <Menu.Item>
-            <Link href="/">
-              <a>노드버드</a>
+            <Link href="/main">
+              <a>NextPus</a>
             </Link>
           </Menu.Item>
           <Menu.Item>
@@ -23,16 +33,36 @@ const MainLayout = ({ children }) => {
               <a>노드버드</a>
             </Link>
           </Menu.Item>
+          <Menu.Item>
+            {/* 태그 검색 */}
+            <SerchInput enterButton />
+          </Menu.Item>
         </Menu>
+
+        {/* Grid sys`  sm(테블릿) */}
+        {/* gutter: column사이의 간격 */}
+        <Row gutter={8}>
+          <Col xs={24} md={6}>
+            <UserProfile />
+          </Col>
+          <Col xs={24} md={12}>
+            {" "}
+            {children}
+          </Col>
+          <Col xs={24} md={6}>
+            <a
+              href="https://www.zerocho.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Made by Zerocho
+            </a>
+          </Col>
+        </Row>
       </div>
-      {children}
     </div>
   );
 };
-
-// children: node 타입
-// return 안에 들어갈 수 있는 모든 것들
-// (즉, <AppLayout> = children)
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,10 +1,11 @@
-//각 페이지들의 공통되는 요소 처리
+// 각 페이지들의 공통되는 요소 처리
 import React from "react";
 import PropTypes from "prop-types";
 import "antd/dist/antd.css";
-//Next에서 Head 수정할 수 있는 모듈
-import Head from "next/head";
+import Head from "next/head"; // Next에서 Head 수정할 수 있는 모듈
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import withReduxSaga from "next-redux-saga";
+import wrapper from "../store/configureStore";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,8 +20,8 @@ const theme = {
   },
 };
 
-//component: index.js의 return 부분(index.js의 부모인 셈)
-const App = ({ Component, pageProps }) => {
+// component: index.js의 return 부분(index.js의 부모인 셈)
+const App = ({ Component }) => {
   return (
     <>
       <GlobalStyle />
@@ -29,7 +30,7 @@ const App = ({ Component, pageProps }) => {
         <title>NextPus</title>
       </Head>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component />
       </ThemeProvider>
     </>
   );
@@ -39,4 +40,4 @@ App.propTypes = {
   Component: PropTypes.elementType.isRequired,
 };
 
-export default App;
+export default wrapper.withRedux(withReduxSaga(App));

@@ -1,12 +1,10 @@
 import React from "react";
-import LandongNavigation from "../components/LandingNavigation";
-import LandingPage from "../components/LandingPage";
+import Landing from "../components/landing";
 
 const Home = () => {
   return (
     <>
-      <LandongNavigation />
-      <LandingPage />
+      <Landing />
     </>
   );
 };

@@ -25,12 +25,17 @@ const MainLayout = ({ children }) => {
           </Menu.Item>
           <Menu.Item>
             <Link href="/profile">
-              <a>프로필</a>
+              <a>내 정보</a>
             </Link>
           </Menu.Item>
           <Menu.Item>
-            <Link href="/signup">
-              <a>노드버드</a>
+            <Link href="/careerpath">
+              <a>직업탐색</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/education">
+              <a>학습페이지</a>
             </Link>
           </Menu.Item>
           <Menu.Item>
@@ -55,7 +60,7 @@ const MainLayout = ({ children }) => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              Made by Zerocho
+              Made by NextPus
             </a>
           </Col>
         </Row>

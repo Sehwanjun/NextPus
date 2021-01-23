@@ -1,0 +1,42 @@
+{
+  "folders": [
+    {
+      "path": "..\\react-nodebird"
+    },
+    {
+      "path": "..\\edupage\\Education-platform"
+    },
+    {
+      "path": "..\\boiler-plate"
+    },
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\dynamic-routing-app"
+    },
+    {
+      "path": "..\\react-linkedin"
+    },
+    {
+      "path": "..\\sexmy\\next-learn-demo"
+    },
+    {
+      "path": "..\\styled-components-website"
+    },
+    {
+      "path": "..\\Fron-End-Multi-steps-form-"
+    },
+    {
+      "path": "..\\multi-page-form"
+    }
+  ],
+  "settings": {
+    "git.ignoreLimitWarning": true,
+    "editor.fontLigatures": null,
+    "launch": {
+      "configurations": [],
+      "compounds": []
+    }
+  }
+}

@@ -1,8 +1,9 @@
-/node_modules
+# Dependency directories
+node_modules/
 /build
 
 dev.js
-
+.next
 
 
 .DS_Store
@@ -32,11 +33,14 @@ logs
 
 # misc
 .DS_Store
+.env
+.env.build
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

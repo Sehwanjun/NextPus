@@ -1,7 +1,8 @@
 import React from "react";
+import About from "components/About";
 
 const index = () => {
-  return <div>기업소개 페이지입니다.</div>;
+  return <About />;
 };
 
 export default index;

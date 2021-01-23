@@ -1,8 +1,11 @@
 {
-  "parser": "babel-eslint",
+  // "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaVersion": 2020,
     "sourceType": "module",
+    "tsconfigRootDir": "./",
     "ecmaFeatures": {
       "jsx": true
     }
@@ -10,20 +13,40 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es2020": true,
+    "es6": true,
+    "jest": true
   },
+  "eslint.validate": [
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
   "extends": [
     "airbnb",
+    "plugin:react/recommended",
     "prettier",
     "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier/react"
+    "prettier/react",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended", 
+    "prettier/@typescript-eslint",
+    "airbnb-base", "plugin:prettier/recommended",
+    "airbnb"
   ],
-  // "extends": ["airbnb-base", "plugin:prettier/recommended"],
-  // "extends": ["airbnb"],
-  "plugins": ["import", "react", "jsx-a11y", "react-hooks", "prettier"],
+  "plugins": ["@typescript-eslint","import", "react", "jsx-a11y", "react-hooks", "prettier"],
+  "settings": {
+        "import/resolver": {
+          "node": {"extensions":[".js", ".jsx", ".ts", ".tsx"] },
+          "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+        }
+    },
   "rules": {
-    // "prettier / prettier": "error",
+    "prettier/prettier": [
+      "error",{},
+      {"usePrettierrc": true}
+    ],
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "no-console": "off",
@@ -37,6 +60,21 @@
     "no-process-exit": "off",
     "object-shorthand": "off",
     "class-methods-use-this": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+     // This rule is not compatible with Next.js's <Link /> components
+    "import/prefer-default-export": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "import/extensions": "off",
+    "@typescript-eslint/no-unused-vars": [
+            "error"
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "react/prop-types": 0,
+        "quotes": 0
   }
 }

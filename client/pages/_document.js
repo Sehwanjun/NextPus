@@ -33,7 +33,20 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <meta charSet="utf-8" />
+          <style global jsx>
+            {`
+      html,
+      body,
+      
+      div#__next
+      {
+        min-height: 100%;
+      }
+    `}
+          </style>
+        </Head>
         <body>
           <Main />
           <NextScript />
